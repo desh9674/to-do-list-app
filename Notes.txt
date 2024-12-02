@@ -1,0 +1,4 @@
+git remote add origin https://github.com/your-username/todo-list-app.git
+git add .
+git commit -m "Initial commit of todo list app"
+git push -u origin main

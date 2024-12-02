@@ -1,0 +1,38 @@
+[
+    {
+        "task": "Gather Documents for Brazil Visa",
+        "completed": false,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "task": "Start wtih improving python coding skill. Compete a project.",
+        "completed": false,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "task": "Talk to Rajeshwari",
+        "completed": false,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "task": "Test this application",
+        "completed": true,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "task": "added another task",
+        "completed": false,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "task": "6th task",
+        "completed": false,
+        "created_date": "2024-12-01 20:38:11",
+        "due_date": "2013-1-31"
+    }
+]

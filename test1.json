@@ -1,0 +1,10 @@
+{
+    "MPEG-4 1080p noscaling": "-crf 18.0 -vcodec libx264 -preset veryslow -acodec libvo_aacenc -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -threads 1",
+    "MPEG-4 1080p noscalingthreadnewaudio": "-crf 18.0 -vcodec libx265 -preset veryslow -c:a aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -threads 1",
+    "MPEG-4 1080p 265vSlowScaling": "-crf 20 -vcodec libx265 -vtag hvc1 -preset veryslow -c:a aac -b:a 128k -vf scale=1920:1080",
+    "MPEG-4 1080p 265slowNoscale": "-crf 20 -vcodec libx265 -vtag hvc1 -preset slow -c:a aac -b:a 128k",
+    "MPEG-4 1080p 265SlowScaling": "-crf 20 -vcodec libx265 -vtag hvc1 -preset slow -c:a aac -b:a 128k -vf scale=1920:1080",
+    "MPEG-4 1080p 265slowNoscaleGPU": "-crf 20 -c:v h265_nvenc -vtag hvc1 -preset slow -c:a aac -b:a 128k",
+    "MPEG-4 1080p 265slowNoscale10Sec": "-crf 20 -vcodec libx265 -vtag hvc1 -preset slow -ss 00:00:00 -to 00:10:00 -c:a aac -b:a 128k",
+    "MPEG-4 1080p 265slowNoscale24Sec": "-crf 20 -vcodec libx265 -vtag hvc1 -preset slow -ss 00:00:00 -to 00:24:00 -c:a aac -b:a 128k"
+}
