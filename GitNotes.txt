@@ -1,0 +1,14 @@
+git remote add origin https://github.com/your-username/todo-list-app.git  # to set current as main branch, run only for first time
+git add .
+git commit -m "Initial commit of todo list app"
+git push -u origin main
+
+git branch -m master main
+
+git remote -v # check versions
+git branch -vv #chec current branch
+
+
+
+
+

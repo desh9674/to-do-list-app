@@ -1,0 +1,6 @@
+# py -m venv "python environment name"
+# 
+
+
+
+uvicorn main:app --reload # to resrart app

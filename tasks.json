@@ -1,38 +1,38 @@
 [
     {
-        "task": "Gather Documents for Brazil Visa",
+        "description": "Gather Documents for Brazil Visa",
         "completed": false,
         "created_date": "2024-12-01 20:30:33",
-        "due_date": null
+        "due_date": "2024-12-9"
     },
     {
-        "task": "Start wtih improving python coding skill. Compete a project.",
-        "completed": false,
-        "created_date": "2024-12-01 20:30:33",
-        "due_date": null
-    },
-    {
-        "task": "Talk to Rajeshwari",
-        "completed": false,
-        "created_date": "2024-12-01 20:30:33",
-        "due_date": null
-    },
-    {
-        "task": "Test this application",
+        "description": "Start wtih improving python coding skill. Compete a project.",
         "completed": true,
         "created_date": "2024-12-01 20:30:33",
         "due_date": null
     },
     {
-        "task": "added another task",
-        "completed": false,
+        "description": "Talk to Rajeshwari",
+        "completed": true,
         "created_date": "2024-12-01 20:30:33",
         "due_date": null
     },
     {
-        "task": "6th task",
-        "completed": false,
-        "created_date": "2024-12-01 20:38:11",
-        "due_date": "2013-1-31"
+        "description": "Test this application",
+        "completed": true,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "description": "Send emial to brazil embassy",
+        "created_date": "2024-12-02 20:35:10",
+        "due_date": null,
+        "completed": false
+    },
+    {
+        "description": "Nevermind",
+        "created_date": "2024-12-02 20:52:46",
+        "due_date": null,
+        "completed": false
     }
 ]

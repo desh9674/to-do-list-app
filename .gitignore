@@ -1,2 +1,5 @@
-tenv1/
+todoenv/
+.vscode/
 .env
+__pycache__/
+*.pyc
