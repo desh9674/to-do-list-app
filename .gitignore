@@ -3,3 +3,4 @@ todoenv/
 .env
 __pycache__/
 *.pyc
+todo-frontend/node_modules

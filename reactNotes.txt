@@ -1,0 +1,2 @@
+npmx create-react-app .
+npm install bootstrap axios
