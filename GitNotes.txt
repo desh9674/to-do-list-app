@@ -1,0 +1,19 @@
+git remote add origin https://github.com/desh9674/to-do-list-app.git  # to set current as main branch, run only for first time
+git add .
+git commit -m "Initial commit of todo list app"
+git push -u origin main
+
+git branch -m master main
+
+git remote -v # check versions
+git branch -vv #chec current branch
+
+
+cd todo-frontend >> npm start
+cd todo-backend >> uvicorn main:app --reload 
+
+
+docker-compose -f docker-compose.dev.yml up --build
+docker-compose -f docker-compose.dev.yml down
+
+

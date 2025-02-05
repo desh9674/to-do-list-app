@@ -1,0 +1,38 @@
+[
+    {
+        "description": "Gather Documents for Brazil Visa",
+        "completed": false,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": "2024-12-9"
+    },
+    {
+        "description": "Start wtih improving python coding skill. Compete a project.",
+        "completed": true,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "description": "Talk to Rajeshwari",
+        "completed": true,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "description": "Test this application",
+        "completed": true,
+        "created_date": "2024-12-01 20:30:33",
+        "due_date": null
+    },
+    {
+        "description": "Send emial to brazil embassy",
+        "created_date": "2024-12-02 20:35:10",
+        "due_date": null,
+        "completed": false
+    },
+    {
+        "description": "Nevermind",
+        "created_date": "2024-12-02 20:52:46",
+        "due_date": null,
+        "completed": false
+    }
+]

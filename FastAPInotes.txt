@@ -1,0 +1,5 @@
+py -m venv python environment name
+uvicorn main:app --reload # to resrart app
+
+cd todo-frontend >> npm start
+cd todo-backend >> uvicorn main:app --reload 

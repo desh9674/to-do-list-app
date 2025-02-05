@@ -1,0 +1,3 @@
+npmx create-react-app .
+npm install bootstrap axios
+npm start to start frontend

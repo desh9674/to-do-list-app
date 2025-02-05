@@ -1,0 +1,8 @@
+dockerNotes.txt
+todoenv/
+.vscode/
+.env
+__pycache__/
+todo-backend/__pycache__
+*.pyc
+todo-frontend/node_modules
