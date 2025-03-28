@@ -2,9 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import { FaTrash, FaEdit } from 'react-icons/fa';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; // Read env variable
+
 function Task({ task, onDelete, onEdit }) {
   const handleDelete = () => {
-    axios.delete(`http://localhost:8000/tasks/${task.id}`)
+    axios.delete(`${API_BASE_URL}/tasks/${task.id}`)
       .then(() => onDelete(task.id))
       .catch(error => {
         console.error('Error deleting task:', error);

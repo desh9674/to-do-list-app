@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; // Read env variable
+
 function TaskList({ tasks, setTasks }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -20,7 +22,7 @@ function TaskList({ tasks, setTasks }) {
     event.preventDefault();
     const updatedTask = { ...editTask, ...newTaskData };
 
-    axios.put(`http://localhost:8000/tasks/${editTask.id}`, updatedTask)
+    axios.put(`${API_BASE_URL}/tasks/${editTask.id}`, updatedTask)
       .then(response => {
         setTasks(tasks.map(task => (task.id === editTask.id ? response.data : task)));
         setEditTask(null);
@@ -32,7 +34,7 @@ function TaskList({ tasks, setTasks }) {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:8000/tasks/')
+    axios.get(`${API_BASE_URL}/tasks/`)
       .then(response => {
         setTasks(response.data);
         setLoading(false);

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; // Read env variable
+
 function TaskForm({ onAddTask }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -15,7 +17,7 @@ function TaskForm({ onAddTask }) {
       return;
     }
 
-    axios.post('http://localhost:8000/tasks/', {
+    axios.post(`${API_BASE_URL}/tasks/`, {
       title: title,
       description: description,
       is_completed: isCompleted,
