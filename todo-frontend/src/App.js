@@ -13,7 +13,7 @@ function App() {
     <div className="container">
       <h1 className="my-4">To-Do List</h1>
       <TaskForm onAddTask={handleAddTask} /> {/* Pass onAddTask to TaskForm */}
-      <TaskList tasks={tasks} /> {/* Pass tasks as props */}
+      <TaskList tasks={tasks} setTasks={setTasks} /> {/* Pass tasks as props */}
     </div>
   );
 }

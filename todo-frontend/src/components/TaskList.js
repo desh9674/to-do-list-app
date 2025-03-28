@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Task from './Task';
 
-function TaskList() {
-  const [tasks, setTasks] = useState([]);
+function TaskList({ tasks, setTasks }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [editTask, setEditTask] = useState(null);  // State for selected task to edit
-  const [newTaskData, setNewTaskData] = useState({ title: '', description: '', is_completed: false });  // State for editing task data
+  const [editTask, setEditTask] = useState(null);
+  const [newTaskData, setNewTaskData] = useState({ title: '', description: '', is_completed: false });
 
   const handleEdit = (task) => {
-    setEditTask(task);  // Set the task to be edited
-    setNewTaskData({ title: task.title, description: task.description, is_completed: task.is_completed });  // Populate form with current data
+    setEditTask(task);
+    setNewTaskData({ title: task.title, description: task.description, is_completed: task.is_completed });
   };
 
   const handleDelete = (taskId) => {
@@ -20,14 +18,12 @@ function TaskList() {
 
   const handleEditSubmit = (event) => {
     event.preventDefault();
-    const updatedTask = { ...editTask, ...newTaskData };  // Merge new task data with the selected task
+    const updatedTask = { ...editTask, ...newTaskData };
 
-    // Update the task in the backend
     axios.put(`http://localhost:8000/tasks/${editTask.id}`, updatedTask)
       .then(response => {
-        // Update the task in the state after successful update
         setTasks(tasks.map(task => (task.id === editTask.id ? response.data : task)));
-        setEditTask(null);  // Close the edit form
+        setEditTask(null);
       })
       .catch(error => {
         console.error('Error updating task:', error);
@@ -58,7 +54,7 @@ function TaskList() {
 
   return (
     <div>
-      {editTask && (
+      {editTask ? (
         <div className="edit-form">
           <h3>Edit Task</h3>
           <form onSubmit={handleEditSubmit}>
@@ -94,19 +90,36 @@ function TaskList() {
             <button type="button" className="btn btn-secondary" onClick={() => setEditTask(null)}>Cancel</button>
           </form>
         </div>
-      )}
-
-      {!editTask && (
-        <div>
-          {tasks.map(task => (
-            <Task
-              key={task.id}
-              task={task}
-              onDelete={handleDelete}
-              onEdit={handleEdit} // Pass the onEdit function here
-            />
-          ))}
-        </div>
+      ) : (
+        <table className="table table-striped table-bordered">
+          <thead className="table-dark">
+            <tr>
+              <th>Task Name</th>
+              <th>Description</th>
+              <th>Created Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tasks.map(task => (
+              <tr key={task.id}>
+                <td>{task.title}</td>
+                <td>{task.description}</td>
+                <td>{new Date(task.created_at).toLocaleString()}</td>
+                <td>
+                  <span className={`badge ${task.is_completed ? 'bg-success' : 'bg-danger'}`}>
+                    {task.is_completed ? 'Completed' : 'Pending'}
+                  </span>
+                </td>
+                <td>
+                  <button className="btn btn-warning btn-sm me-2" onClick={() => handleEdit(task)}>Edit</button>
+                  <button className="btn btn-danger btn-sm" onClick={() => handleDelete(task.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );

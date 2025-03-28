@@ -1,3 +1,0 @@
-aws ecs update-service --cluster todo-cluster --service todo-backend-service --desired-count 0
-http://appleinc.webex.com/appleinc/j.php?MTID=m8150e850032ab3b946f454b653c0d5d0
-

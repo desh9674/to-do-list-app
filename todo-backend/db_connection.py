@@ -1,9 +1,12 @@
 from pymongo import MongoClient
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 # Load MongoDB URI from environment variable
 MONGODB_URI = os.getenv("MONGODB_URI")
-
 if not MONGODB_URI:
     raise ValueError("No MongoDB URI found in environment variables.")
 
